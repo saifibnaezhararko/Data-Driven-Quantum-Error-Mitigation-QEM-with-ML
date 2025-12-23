@@ -1,0 +1,27 @@
+{
+  "by_noise_strength": {
+    "0.05": {
+      "model_mae": 0.026372479149722496,
+      "baseline_mae": 0.0133056640625,
+      "improvement_ratio": 0.5045283754690165
+    },
+    "0.1": {
+      "model_mae": 0.03585624487168389,
+      "baseline_mae": 0.0246490478515625,
+      "improvement_ratio": 0.6874408611323423
+    }
+  },
+  "by_depth": {
+    "2": {
+      "model_mae": 0.030463803943712266,
+      "baseline_mae": 0.0176971435546875,
+      "improvement_ratio": 0.5809236294779987
+    },
+    "4": {
+      "model_mae": 0.03176492007769412,
+      "baseline_mae": 0.020257568359375,
+      "improvement_ratio": 0.6377339628063543
+    }
+  },
+  "by_noise_type": {}
+}

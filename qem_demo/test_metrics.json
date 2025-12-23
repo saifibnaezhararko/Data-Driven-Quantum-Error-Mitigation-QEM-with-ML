@@ -1,0 +1,10 @@
+{
+  "model_mae": 0.03234992154466454,
+  "model_max_error": 0.11616218090057373,
+  "model_mse": 0.0015738789386016932,
+  "baseline_mae": 0.01924896240234375,
+  "baseline_max_error": 0.146484375,
+  "baseline_mse": 0.0013095606118440628,
+  "improvement_ratio": 0.595023464763811,
+  "error_reduction": -68.06059915585693
+}

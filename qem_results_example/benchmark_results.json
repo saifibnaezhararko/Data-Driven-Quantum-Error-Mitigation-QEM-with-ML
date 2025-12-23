@@ -1,0 +1,48 @@
+{
+  "by_noise_strength": {
+    "0.01": {
+      "model_mae": 0.021677892925799823,
+      "baseline_mae": 0.0031656901041666667,
+      "improvement_ratio": 0.14603310916805196
+    },
+    "0.05": {
+      "model_mae": 0.027197105722734705,
+      "baseline_mae": 0.012620035807291667,
+      "improvement_ratio": 0.46402127990929126
+    },
+    "0.1": {
+      "model_mae": 0.03635125896641209,
+      "baseline_mae": 0.023626708984375,
+      "improvement_ratio": 0.649955727976455
+    }
+  },
+  "by_depth": {
+    "2": {
+      "model_mae": 0.028277431184930417,
+      "baseline_mae": 0.009062703450520833,
+      "improvement_ratio": 0.3204924588535652
+    },
+    "4": {
+      "model_mae": 0.028751592835760675,
+      "baseline_mae": 0.012663777669270833,
+      "improvement_ratio": 0.440454820768047
+    },
+    "6": {
+      "model_mae": 0.028197233594255522,
+      "baseline_mae": 0.017685953776041666,
+      "improvement_ratio": 0.6272230116802925
+    }
+  },
+  "by_noise_type": {
+    "amplitude_damping": {
+      "model_mae": 0.02503606330978477,
+      "baseline_mae": 0.010805257161458333,
+      "improvement_ratio": 0.4315877072109554
+    },
+    "depolarizing": {
+      "model_mae": 0.0317814417668463,
+      "baseline_mae": 0.015469699435763888,
+      "improvement_ratio": 0.48675260075524757
+    }
+  }
+}
