@@ -22,7 +22,7 @@ def example_1_quick_start():
         'model_type': 'adaptive',
         'epochs': 30,
         'batch_size': 32,
-        'results_dir': '/home/claude/qem_results_example1'
+        'results_dir': 'qem_results_example1'
     }
     
     trainer, results = run_training_pipeline(config)
@@ -55,7 +55,7 @@ def example_2_explicit_noise_model():
             'hidden_dims': [512, 256, 128, 64],
             'use_residual': True
         },
-        'results_dir': '/home/claude/qem_results_example2'
+        'results_dir': 'qem_results_example2'
     }
     
     trainer, results = run_training_pipeline(config)
@@ -91,7 +91,7 @@ def example_3_transformer_architecture():
             'num_transformer_blocks': 2,
             'dropout_rate': 0.1
         },
-        'results_dir': '/home/claude/qem_results_example3'
+        'results_dir': 'qem_results_example3'
     }
     
     trainer, results = run_training_pipeline(config)
@@ -125,7 +125,7 @@ def example_4_expectation_values():
             'encoder_hidden': [64, 32],
             'mitigation_hidden': [128, 64, 32]
         },
-        'results_dir': '/home/claude/qem_results_example4'
+        'results_dir': 'qem_results_example4'
     }
     
     trainer, results = run_training_pipeline(config)
@@ -153,7 +153,7 @@ def example_5_comprehensive_benchmark():
         feature_type='bitstring'
     )
     
-    dataset_path = '/home/claude/qem_comprehensive_dataset.npz'
+    dataset_path = 'qem_comprehensive_dataset.npz'
     generator.save_dataset(dataset, dataset_path)
 
     config_adaptive = {
@@ -170,7 +170,7 @@ def example_5_comprehensive_benchmark():
             'encoder_hidden': [128, 64],
             'mitigation_hidden': [256, 128, 64]
         },
-        'results_dir': '/home/claude/qem_results_comprehensive'
+        'results_dir': 'qem_results_comprehensive'
     }
     
     trainer, results = run_training_pipeline(config_adaptive)
@@ -204,7 +204,7 @@ def compare_models():
         feature_type='bitstring'
     )
     
-    dataset_path = '/home/claude/qem_comparison_dataset.npz'
+    dataset_path = 'qem_comparison_dataset.npz'
     generator.save_dataset(dataset, dataset_path)
 
     results_comparison = {}
@@ -227,7 +227,7 @@ def compare_models():
             'batch_size': 32,
             'learning_rate': 1e-3,
             'verbose': 0,
-            'results_dir': f'/home/claude/qem_results_comparison_{model_type}'
+            'results_dir': f'qem_results_comparison_{model_type}'
         }
         
         trainer, results = run_training_pipeline(config)
@@ -269,7 +269,7 @@ def custom_experiment():
         'model_type': 'adaptive',
         'epochs': 30,
         'batch_size': 32,
-        'results_dir': '/home/claude/qem_results_custom'
+        'results_dir': 'qem_results_custom'
     }
     
     trainer, results = run_training_pipeline(config)
