@@ -1,48 +1,48 @@
 {
   "by_noise_strength": {
     "0.01": {
-      "model_mae": 0.021677892925799823,
+      "model_mae": 0.017007566881754126,
       "baseline_mae": 0.0031656901041666667,
-      "improvement_ratio": 0.14603310916805196
+      "improvement_ratio": 0.1861342146220132
     },
     "0.05": {
-      "model_mae": 0.027197105722734705,
+      "model_mae": 0.021704145596474215,
       "baseline_mae": 0.012620035807291667,
-      "improvement_ratio": 0.46402127990929126
+      "improvement_ratio": 0.5814573879997267
     },
     "0.1": {
-      "model_mae": 0.03635125896641209,
+      "model_mae": 0.03063720804202603,
       "baseline_mae": 0.023626708984375,
-      "improvement_ratio": 0.649955727976455
+      "improvement_ratio": 0.7711769607715394
     }
   },
   "by_depth": {
     "2": {
-      "model_mae": 0.028277431184930417,
+      "model_mae": 0.02258677460437563,
       "baseline_mae": 0.009062703450520833,
-      "improvement_ratio": 0.3204924588535652
+      "improvement_ratio": 0.4012393805340032
     },
     "4": {
-      "model_mae": 0.028751592835760675,
+      "model_mae": 0.021632883715695547,
       "baseline_mae": 0.012663777669270833,
-      "improvement_ratio": 0.440454820768047
+      "improvement_ratio": 0.5853948015299847
     },
     "6": {
-      "model_mae": 0.028197233594255522,
+      "model_mae": 0.025129262200183196,
       "baseline_mae": 0.017685953776041666,
-      "improvement_ratio": 0.6272230116802925
+      "improvement_ratio": 0.70379916589484
     }
   },
   "by_noise_type": {
     "amplitude_damping": {
-      "model_mae": 0.02503606330978477,
+      "model_mae": 0.0223045999155147,
       "baseline_mae": 0.010805257161458333,
-      "improvement_ratio": 0.4315877072109554
+      "improvement_ratio": 0.4844407522388411
     },
     "depolarizing": {
-      "model_mae": 0.0317814417668463,
+      "model_mae": 0.023928013764654883,
       "baseline_mae": 0.015469699435763888,
-      "improvement_ratio": 0.48675260075524757
+      "improvement_ratio": 0.6465099689392046
     }
   }
 }

@@ -15,7 +15,7 @@ class NoiseEncoderNetwork(Model):
         for hidden_dim in hidden_dims:
             self.encoder_layers.append(layers.Dense(hidden_dim, activation='relu'))
             self.encoder_layers.append(layers.BatchNormalization())
-            self.encoder_layers.append(layers.Dropout(0.2))
+            self.encoder_layers.append(layers.Dropout(0.1))
         
         self.latent_layer = layers.Dense(latent_dim, activation='tanh', name='latent_noise')
 
@@ -36,7 +36,7 @@ class ConditionalMitigationNetwork(Model):
         for hidden_dim in hidden_dims:
             self.mitigation_layers.append(layers.Dense(hidden_dim, activation='relu'))
             self.mitigation_layers.append(layers.BatchNormalization())
-            self.mitigation_layers.append(layers.Dropout(0.2))
+            self.mitigation_layers.append(layers.Dropout(0.1))
         
         self.output_layer = layers.Dense(output_dim, activation='linear', name='mitigated_output')
 
@@ -54,13 +54,13 @@ class ConditionalMitigationNetwork(Model):
 
 class AdaptiveQEMModel(Model):
 
-    def __init__(self, 
+    def __init__(self,
                  input_dim: int,
                  output_dim: int,
                  latent_dim: int = 16,
                  encoder_hidden: List[int] = [128, 64],
                  mitigation_hidden: List[int] = [256, 128, 64],
-                 use_residual: bool = True):
+                 use_residual: bool = False):
         super(AdaptiveQEMModel, self).__init__()
         
         self.input_dim = input_dim
@@ -93,7 +93,7 @@ class ExplicitNoiseQEMModel(Model):
                  output_dim: int,
                  noise_descriptor_dim: int,
                  hidden_dims: List[int] = [256, 128, 64],
-                 use_residual: bool = True):
+                 use_residual: bool = False):
         super(ExplicitNoiseQEMModel, self).__init__()
         
         self.input_dim = input_dim
@@ -107,7 +107,7 @@ class ExplicitNoiseQEMModel(Model):
         for hidden_dim in hidden_dims:
             self.mitigation_layers.append(layers.Dense(hidden_dim, activation='relu'))
             self.mitigation_layers.append(layers.BatchNormalization())
-            self.mitigation_layers.append(layers.Dropout(0.2))
+            self.mitigation_layers.append(layers.Dropout(0.1))
         
         self.output_layer = layers.Dense(output_dim, activation='linear')
 
@@ -213,7 +213,7 @@ def create_qem_model(model_type: str,
             latent_dim=kwargs.get('latent_dim', 16),
             encoder_hidden=kwargs.get('encoder_hidden', [128, 64]),
             mitigation_hidden=kwargs.get('mitigation_hidden', [256, 128, 64]),
-            use_residual=kwargs.get('use_residual', True)
+            use_residual=kwargs.get('use_residual', False)
         )
 
     elif model_type == 'explicit':
@@ -225,7 +225,7 @@ def create_qem_model(model_type: str,
             output_dim=output_dim,
             noise_descriptor_dim=noise_descriptor_dim,
             hidden_dims=kwargs.get('hidden_dims', [256, 128, 64]),
-            use_residual=kwargs.get('use_residual', True)
+            use_residual=kwargs.get('use_residual', False)
         )
 
     elif model_type == 'transformer':

@@ -1,10 +1,10 @@
 {
-  "model_mae": 0.03272271781396638,
-  "model_max_error": 0.2775934338569641,
-  "model_mse": 0.0025227913733346227,
+  "model_mae": 0.023725271748642425,
+  "model_max_error": 0.26256465911865234,
+  "model_mse": 0.0014955341047883115,
   "baseline_mae": 0.015284220377604166,
   "baseline_max_error": 0.2769775390625,
   "baseline_mse": 0.001285814576678806,
-  "improvement_ratio": 0.467082852484848,
-  "error_reduction": -114.09477883421972
+  "improvement_ratio": 0.6442168730260693,
+  "error_reduction": -55.2272288837634
 }

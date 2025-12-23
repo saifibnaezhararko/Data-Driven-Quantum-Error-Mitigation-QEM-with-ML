@@ -17,7 +17,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '-1'  # Force CPU-only mode to reduce memor
 if __name__ == '__main__':
     multiprocessing.freeze_support()
     print("="*70)
-    print("QEM HACKATHON SOLUTION - QUICKSTART")
+    print("QEM HACKATHON SOLUTION - FAST TEST")
     print("="*70)
 
     print("\n[1/5] Importing modules...")
@@ -32,16 +32,16 @@ if __name__ == '__main__':
         print("  pip install qiskit qiskit-aer tensorflow numpy matplotlib scikit-learn --break-system-packages")
         exit(1)
 
-    print("\n[2/5] Generating improved quantum dataset...")
-    print("  (3 qubits, 50 circuits, 4 depths, 5 noise levels)")
+    print("\n[2/5] Generating improved quantum dataset (FAST)...")
+    print("  (3 qubits, 20 circuits, 3 depths, 3 noise levels)")
 
     generator = QEMDataGenerator(num_qubits=3, shots=8192)
 
     dataset = generator.generate_dataset(
-        num_circuits=50,
-        depths=[2, 4, 6, 8],
+        num_circuits=20,
+        depths=[2, 4, 6],
         noise_types=['depolarizing', 'amplitude_damping'],
-        noise_strengths=[0.01, 0.03, 0.05, 0.08, 0.1],
+        noise_strengths=[0.01, 0.05, 0.1],
         circuit_type='random',
         feature_type='expectation',
         n_jobs=1
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     print("✓ Model created")
 
     print("\n[4/5] Training model with improved configuration...")
-    print("  (This will take ~5-10 minutes)")
+    print("  (This will take ~3-5 minutes)")
 
     trainer = QEMTrainer(
         model=model,
@@ -135,9 +135,5 @@ if __name__ == '__main__':
     print(f"Error Reduction:          {error_reduction:.1f}%")
     print(f"{'='*70}")
 
-    print("\n✅ QUICKSTART SUCCESSFUL!")
-    print("\nNext steps:")
-    print("  1. Run 'python qem_examples.py' for comprehensive examples")
-    print("  2. See README.md for detailed documentation")
-    print("  3. Modify configs to experiment with different settings")
-    print("\nHappy hacking! 🚀")
+    print("\n✅ FAST TEST SUCCESSFUL!")
+    print("\nFor full training, run 'python quickstart.py'")
